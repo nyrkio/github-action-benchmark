@@ -76,7 +76,7 @@ export function nyrkioJsonInit(commit: Commit, buildTime: number): NyrkioJson {
         metrics: [],
         attributes: {
             git_repo: commit.url.split(/commit/)[0],
-            branch: (commit.branch?commit.branch:"unknown"),
+            branch: commit.branch ? commit.branch : 'unknown',
             git_commit: commit.id,
         },
         extra_info: { build_time: buildTime },
@@ -101,6 +101,7 @@ function convertBenchmarkToNyrkioJson(bench: Benchmark, config: Config): [Nyrkio
     const d = bench.date / 1000; // Only Unix timestamps in Nyrkiö context.
     let nyrkioResult = nyrkioJsonInit(bench.commit, d);
     let testName: string | undefined = '';
+    let branch: string | undefined = undefined;
     let nyrkioPath = name;
     for (const b of benches) {
         if (testName !== b.testName) {
@@ -114,8 +115,10 @@ function convertBenchmarkToNyrkioJson(bench: Benchmark, config: Config): [Nyrkio
 
             nyrkioResult = nyrkioJsonInit(bench.commit, d);
             testName = b.testName;
+            branch = nyrkioResult.attributes.branch;
+            core.debug(branch);
             if (testName && testName.length > 0) {
-                nyrkioPath = name + '/' + testName;
+                nyrkioPath = name + '/' + branch + '/' + testName;
             } else {
                 nyrkioPath = name;
             }
@@ -127,7 +130,7 @@ function convertBenchmarkToNyrkioJson(bench: Benchmark, config: Config): [Nyrkio
         m.unit = b.unit;
         nyrkioResult.metrics.push(m);
     }
-    if (nyrkioResult.metrics.length>0){
+    if (nyrkioResult.metrics.length > 0) {
         if (!allTestResults) {
             allTestResults = [{ path: nyrkioPath, git_commit: bench.commit.id, results: [nyrkioResult] }];
         } else {
@@ -160,10 +163,10 @@ async function setParameters(config: Config) {
 async function postResults(allTestResults: [NyrkioJsonPath], config: Config): Promise<[NyrkioAllChanges] | boolean> {
     await setParameters(config);
     const { nyrkioToken, nyrkioApiRoot } = config;
-    core.debug(nyrkioToken?nyrkioToken.substring(0,5):"WHERE's MY TOKEN???");
+    core.debug(nyrkioToken ? nyrkioToken.substring(0, 5) : "WHERE's MY TOKEN???");
     const options = {
         headers: {
-            "Authorization": `Bearer ${nyrkioToken}`,
+            Authorization: `Bearer ${nyrkioToken}`,
         },
     };
     let allChanges: [NyrkioAllChanges] | boolean = false;
@@ -171,7 +174,7 @@ async function postResults(allTestResults: [NyrkioJsonPath], config: Config): Pr
 
     for (const r of allTestResults) {
         const uri = nyrkioApiRoot + 'result/' + r.path;
-        core.debug('PUT results: ' + uri);
+        console.log('PUT results: ' + uri);
         try {
             // Will throw on failure
             const response = await axios.put(uri, r.results, options);
@@ -195,8 +198,7 @@ async function postResults(allTestResults: [NyrkioJsonPath], config: Config): Pr
                     }
                 }
             }
-        }
-        catch (err: any){
+        } catch (err: any) {
             console.error(`PUT to ${uri} failed. I'll keep trying with the others though.`);
             console.error(err.status);
             console.error(err.code);
@@ -210,7 +212,7 @@ async function postResults(allTestResults: [NyrkioJsonPath], config: Config): Pr
 
 export async function nyrkioFindChanges(b: Benchmark, config: Config) {
     const { nyrkioEnable, failOnAlert } = config;
-    core.debug("nyrkio-enable=" + nyrkioEnable.toString());
+    core.debug('nyrkio-enable=' + nyrkioEnable.toString());
     if (!nyrkioEnable) return;
 
     const allTestResults = convertBenchmarkToNyrkioJson(b, config);
@@ -222,10 +224,11 @@ export async function nyrkioFindChanges(b: Benchmark, config: Config) {
         core.setFailed('Nyrkiö detected a change in your performance test results. Please see the log for details.');
         core.info('Nyrkiö detected a change in your performance test results. Please see the log for details.');
         core.info(JSON.stringify(changes));
+    } else {
+        console.log(
+            "Nyrkiö didn't find any changes now. But you should check again in a week or so, smaller changes are detected with a delay to avoid false positives.",
+        );
     }
-    else {
-        console.log("Nyrkiö didn't find any changes now. But you should check again in a week or so, smaller changes are detected with a delay to avoid false positives.")
-    }
-    console.log("https://nyrkiö.com");
+    console.log('https://nyrkiö.com');
     return;
 }
