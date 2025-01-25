@@ -92,11 +92,10 @@ async function validateOutputFilePath(filePath: string): Promise<string> {
     }
 }
 
-function validateGhPagesBranch(branch: string) {
-    if (branch) {
-        return;
+function validateGhPagesBranch(repo: string, branch: string) {
+    if (repo && !branch) {
+        throw new Error(`If gh-repository is used also 'gh-pages-branch' is required`);
     }
-    throw new Error(`Branch value must not be empty for 'gh-pages-branch' input`);
 }
 
 function validateBenchmarkDataDirPath(dirPath: string): string {
@@ -272,7 +271,7 @@ export async function configFromJobInput(): Promise<Config> {
 
     validateToolType(tool);
     outputFilePath = await validateOutputFilePath(outputFilePath);
-    validateGhPagesBranch(ghPagesBranch);
+    validateGhPagesBranch(ghRepository, ghPagesBranch);
     benchmarkDataDirPath = validateBenchmarkDataDirPath(benchmarkDataDirPath);
     validateName(name);
     if (autoPush) {
