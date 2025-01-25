@@ -19,9 +19,9 @@ async function main() {
     const { nyrkioEnable, ghRepository, ghPagesBranch, externalDataJsonPath } = config;
     if (nyrkioEnable) await nyrkioFindChanges(bench, config);
 
-    core.debug('gh-repository: ' + ghRepository);
-    core.debug('gh-pages-branch: ' + ghPagesBranch);
-    core.debug('external-data-json-path: ' + externalDataJsonPath);
+    core.debug(`gh-repository: ${ghRepository}`);
+    core.debug(`gh-pages-branch: ${ghPagesBranch}`);
+    core.debug(`external-data-json-path: ${externalDataJsonPath}`);
     if (ghRepository || ghPagesBranch || externalDataJsonPath) await writeBenchmark(bench, config);
 
     console.log('github-action-benchmark end.', '\nData:', bench);
