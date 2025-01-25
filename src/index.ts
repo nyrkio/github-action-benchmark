@@ -18,7 +18,7 @@ async function main() {
 
     const { nyrkioEnable, ghRepository } = config;
     if (nyrkioEnable) await nyrkioFindChanges(bench, config);
-
+    core.debug('gh-repository: ' + ghRepository);
     if (ghRepository) await writeBenchmark(bench, config);
 
     console.log('github-action-benchmark end.', '\nData:', bench);
