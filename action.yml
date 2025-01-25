@@ -19,7 +19,7 @@ inputs:
   gh-pages-branch:
     description: 'Branch for gh-pages'
     required: false
-    default: 'gh-pages'
+    # default: 'gh-pages'
   gh-repository:
     description: 'Url to an optional different repository to store benchmark results'
     required: false

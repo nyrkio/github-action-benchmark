@@ -36,7 +36,7 @@ jobs:
           name: Benchmark.Net Benchmark
           tool: 'benchmarkdotnet'
           output-file-path: examples/benchmarkdotnet/BenchmarkDotNet.Artifacts/results/Sample.Benchmarks-report-full-compressed.json
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
           skip-fetch-gh-pages: true
           fail-on-alert: true
           summary-always: true
@@ -69,7 +69,8 @@ jobs:
           name: Benchmark.js Benchmark
           tool: 'benchmarkjs'
           output-file-path: examples/benchmarkjs/output.txt
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           skip-fetch-gh-pages: true
           fail-on-alert: true
           summary-always: true
@@ -107,7 +108,8 @@ jobs:
           name: Catch2 Benchmark
           tool: 'catch2'
           output-file-path: examples/catch2_v2/benchmark_result.txt
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           skip-fetch-gh-pages: true
           fail-on-alert: true
           summary-always: true
@@ -145,7 +147,8 @@ jobs:
           name: Catch2 Benchmark (v3)
           tool: 'catch2'
           output-file-path: examples/catch2/benchmark_result.txt
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           skip-fetch-gh-pages: true
           fail-on-alert: true
           summary-always: true
@@ -185,7 +188,8 @@ jobs:
           name: C++ Benchmark
           tool: 'googlecpp'
           output-file-path: examples/cpp/benchmark_result.json
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           skip-fetch-gh-pages: true
           fail-on-alert: true
           summary-always: true
@@ -221,7 +225,8 @@ jobs:
           name: Go Benchmark
           tool: 'go'
           output-file-path: examples/go/output.txt
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           skip-fetch-gh-pages: true
           fail-on-alert: true
           summary-always: true
@@ -261,7 +266,8 @@ jobs:
           name: JMH Benchmark
           tool: "jmh"
           output-file-path: examples/java/jmh-result.json
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           skip-fetch-gh-pages: true
           fail-on-alert: true
           summary-always: true
@@ -303,7 +309,8 @@ jobs:
           name: Julia benchmark
           tool: 'julia'
           output-file-path: examples/julia/output.json
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           skip-fetch-gh-pages: true
           fail-on-alert: true
           summary-always: true
@@ -342,7 +349,8 @@ jobs:
           name: Python Benchmark with pytest-benchmark
           tool: 'pytest'
           output-file-path: examples/pytest/output.json
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           skip-fetch-gh-pages: true
           fail-on-alert: true
           summary-always: true
@@ -376,7 +384,8 @@ jobs:
           name: Rust Benchmark
           tool: 'cargo'
           output-file-path: examples/rust/output.txt
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           fail-on-alert: true
           summary-always: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -409,7 +418,8 @@ jobs:
           name: Criterion.rs Benchmark
           tool: 'cargo'
           output-file-path: examples/criterion-rs/output.txt
-          gh-repository: gh-pages
+          gh-pages-branch: gh-pages
+
           fail-on-alert: true
           summary-always: true
           github-token: ${{ secrets.GITHUB_TOKEN }}

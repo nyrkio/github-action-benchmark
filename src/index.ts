@@ -16,10 +16,13 @@ async function main() {
     core.debug(`But timestamp of the commit is: ${commit.timestamp}`);
     core.debug(tool);
 
-    const { nyrkioEnable, ghRepository } = config;
+    const { nyrkioEnable, ghRepository, ghPagesBranch, externalDataJsonPath } = config;
     if (nyrkioEnable) await nyrkioFindChanges(bench, config);
+
     core.debug('gh-repository: ' + ghRepository);
-    if (ghRepository) await writeBenchmark(bench, config);
+    core.debug('gh-pages-branch: ' + ghPagesBranch);
+    core.debug('external-data-json-path: ' + externalDataJsonPath);
+    if (ghRepository || ghPagesBranch || externalDataJsonPath) await writeBenchmark(bench, config);
 
     console.log('github-action-benchmark end.', '\nData:', bench);
 }
