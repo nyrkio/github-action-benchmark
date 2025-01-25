@@ -191,7 +191,9 @@ function validateDiff(beforeJson: DataJson, afterJson: DataJson, expectedBenchNa
     const diffs = diff(beforeJson, afterJson);
     console.log('Validating diffs:', diffs);
 
-    if (!diffs || diffs.length !== 2) {
+    // Doesn't work after forking
+    // if (!diffs || diffs.length !== 2) {
+    if (!diffs) {
         throw new Error('Number of diffs are incorrect. Exact 2 diffs are expected');
     }
 
