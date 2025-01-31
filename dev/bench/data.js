@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1738332766351,
+  "lastUpdate": 1738332768801,
   "entries": {
     "Rust Benchmark": [
       {
@@ -61535,6 +61535,42 @@ window.BENCHMARK_DATA = {
             "value": 43.18159534931183,
             "unit": "ns",
             "range": "± 0.15700626197186854"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "371a117a4b459319eb51426c7e728d6d549e9822",
+          "message": "nyrkio: Be more defensive about sanitizing URI components\n\nTurns out it's popular to simply use the entire SQL query as the\ntest name. Including ? and several different quotes and apostrophes.",
+          "timestamp": "2025-01-31T16:10:36+02:00",
+          "tree_id": "249ef0056b6af2a87d9d05aa122acf74c65a9783",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/371a117a4b459319eb51426c7e728d6d549e9822"
+        },
+        "date": 1738332765301,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Sample.Benchmarks.Fib10",
+            "value": 21.178749873087956,
+            "unit": "ns",
+            "range": "± 0.017635375506680095"
+          },
+          {
+            "name": "Sample.Benchmarks.Fib20",
+            "value": 43.71401193936666,
+            "unit": "ns",
+            "range": "± 0.09887808110668155"
           }
         ]
       }
