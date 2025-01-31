@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1738332722200,
+  "lastUpdate": 1738332723098,
   "entries": {
     "Rust Benchmark": [
       {
@@ -25981,6 +25981,60 @@ window.BENCHMARK_DATA = {
             "value": 4,
             "unit": "auxMetricUnits",
             "extra": "30376 times\n4 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "371a117a4b459319eb51426c7e728d6d549e9822",
+          "message": "nyrkio: Be more defensive about sanitizing URI components\n\nTurns out it's popular to simply use the entire SQL query as the\ntest name. Including ? and several different quotes and apostrophes.",
+          "timestamp": "2025-01-31T16:10:36+02:00",
+          "tree_id": "249ef0056b6af2a87d9d05aa122acf74c65a9783",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/371a117a4b459319eb51426c7e728d6d549e9822"
+        },
+        "date": 1738332720221,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib10",
+            "value": 312.3,
+            "unit": "ns/op",
+            "extra": "3868614 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkFib20",
+            "value": 39850,
+            "unit": "ns/op",
+            "extra": "30157 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkFib20WithAuxMetric",
+            "value": 39865,
+            "unit": "ns/op\t         4.000 auxMetricUnits",
+            "extra": "30213 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkFib20WithAuxMetric - ns/op",
+            "value": 39865,
+            "unit": "ns/op",
+            "extra": "30213 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkFib20WithAuxMetric - auxMetricUnits",
+            "value": 4,
+            "unit": "auxMetricUnits",
+            "extra": "30213 times\n4 procs"
           }
         ]
       }
