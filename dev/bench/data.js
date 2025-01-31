@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1738332759118,
+  "lastUpdate": 1738332762882,
   "entries": {
     "Rust Benchmark": [
       {
@@ -63155,6 +63155,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
             "value": 1951082622.8898678,
+            "unit": "ops/s",
+            "extra": "iterations: 3\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "371a117a4b459319eb51426c7e728d6d549e9822",
+          "message": "nyrkio: Be more defensive about sanitizing URI components\n\nTurns out it's popular to simply use the entire SQL query as the\ntest name. Including ? and several different quotes and apostrophes.",
+          "timestamp": "2025-01-31T16:10:36+02:00",
+          "tree_id": "249ef0056b6af2a87d9d05aa122acf74c65a9783",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/371a117a4b459319eb51426c7e728d6d549e9822"
+        },
+        "date": 1738332759952,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
+            "value": 1940441856.0940826,
             "unit": "ops/s",
             "extra": "iterations: 3\nforks: 1\nthreads: 1"
           }
