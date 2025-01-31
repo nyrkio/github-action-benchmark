@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1738332741308,
+  "lastUpdate": 1738332757243,
   "entries": {
     "Rust Benchmark": [
       {
@@ -51073,6 +51073,42 @@ window.BENCHMARK_DATA = {
             "value": 19996.08303321422,
             "unit": "ns/iter",
             "extra": "iterations: 34986\ncpu: 19995.306694106217 ns\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "371a117a4b459319eb51426c7e728d6d549e9822",
+          "message": "nyrkio: Be more defensive about sanitizing URI components\n\nTurns out it's popular to simply use the entire SQL query as the\ntest name. Including ? and several different quotes and apostrophes.",
+          "timestamp": "2025-01-31T16:10:36+02:00",
+          "tree_id": "249ef0056b6af2a87d9d05aa122acf74c65a9783",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/371a117a4b459319eb51426c7e728d6d549e9822"
+        },
+        "date": 1738332753731,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 158.74714056280285,
+            "unit": "ns/iter",
+            "extra": "iterations: 4410221\ncpu: 158.73893847950023 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 19996.668339779306,
+            "unit": "ns/iter",
+            "extra": "iterations: 33869\ncpu: 19996.489415099357 ns\nthreads: 1"
           }
         ]
       }
