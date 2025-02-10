@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739226230628,
+  "lastUpdate": 1739226237035,
   "entries": {
     "Rust Benchmark": [
       {
@@ -26431,6 +26431,60 @@ window.BENCHMARK_DATA = {
             "value": 4,
             "unit": "auxMetricUnits",
             "extra": "30228 times\n4 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "a7cf246a4a24b71812d5f66fae9908a35bfff372",
+          "message": "Sticth neverFail support into config.ts itself\n\nChicken egg problem: How do you support a parameter while parsing\nparameters...",
+          "timestamp": "2025-02-11T00:22:18+02:00",
+          "tree_id": "773bcc87dc66f17cd9c161d0cf7b6eee4a5e7a3f",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/a7cf246a4a24b71812d5f66fae9908a35bfff372"
+        },
+        "date": 1739226233359,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib10",
+            "value": 314.1,
+            "unit": "ns/op",
+            "extra": "3872091 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkFib20",
+            "value": 39812,
+            "unit": "ns/op",
+            "extra": "30178 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkFib20WithAuxMetric",
+            "value": 39925,
+            "unit": "ns/op\t         4.000 auxMetricUnits",
+            "extra": "30230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkFib20WithAuxMetric - ns/op",
+            "value": 39925,
+            "unit": "ns/op",
+            "extra": "30230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkFib20WithAuxMetric - auxMetricUnits",
+            "value": 4,
+            "unit": "auxMetricUnits",
+            "extra": "30230 times\n4 procs"
           }
         ]
       }
