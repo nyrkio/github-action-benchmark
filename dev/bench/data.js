@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739158196038,
+  "lastUpdate": 1739226221503,
   "entries": {
     "Rust Benchmark": [
       {
@@ -44779,6 +44779,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.00002279058250312446",
             "extra": "mean: 1.6421543152704128 msec\nrounds: 609"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "a7cf246a4a24b71812d5f66fae9908a35bfff372",
+          "message": "Sticth neverFail support into config.ts itself\n\nChicken egg problem: How do you support a parameter while parsing\nparameters...",
+          "timestamp": "2025-02-11T00:22:18+02:00",
+          "tree_id": "773bcc87dc66f17cd9c161d0cf7b6eee4a5e7a3f",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/a7cf246a4a24b71812d5f66fae9908a35bfff372"
+        },
+        "date": 1739226218677,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "bench.py::test_fib_10",
+            "value": 75844.43675675883,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0000011606021042452236",
+            "extra": "mean: 13.184882672503802 usec\nrounds: 35712"
+          },
+          {
+            "name": "bench.py::test_fib_20",
+            "value": 619.6225957005054,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00002424245852700745",
+            "extra": "mean: 1.6138856247962754 msec\nrounds: 613"
           }
         ]
       }
