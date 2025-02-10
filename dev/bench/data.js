@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739226242508,
+  "lastUpdate": 1739226253304,
   "entries": {
     "Rust Benchmark": [
       {
@@ -51859,6 +51859,42 @@ window.BENCHMARK_DATA = {
             "value": 20080.277934488735,
             "unit": "ns/iter",
             "extra": "iterations: 34742\ncpu: 20079.5722756318 ns\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "a7cf246a4a24b71812d5f66fae9908a35bfff372",
+          "message": "Sticth neverFail support into config.ts itself\n\nChicken egg problem: How do you support a parameter while parsing\nparameters...",
+          "timestamp": "2025-02-11T00:22:18+02:00",
+          "tree_id": "773bcc87dc66f17cd9c161d0cf7b6eee4a5e7a3f",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/a7cf246a4a24b71812d5f66fae9908a35bfff372"
+        },
+        "date": 1739226250318,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 158.6311231978133,
+            "unit": "ns/iter",
+            "extra": "iterations: 4413666\ncpu: 158.62267330604539 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 19970.29295154193,
+            "unit": "ns/iter",
+            "extra": "iterations: 34958\ncpu: 19969.60352422908 ns\nthreads: 1"
           }
         ]
       }
