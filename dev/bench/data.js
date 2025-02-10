@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739226237035,
+  "lastUpdate": 1739226242508,
   "entries": {
     "Rust Benchmark": [
       {
@@ -57027,6 +57027,44 @@ window.BENCHMARK_DATA = {
             "name": "Fibonacci 20",
             "value": 19.9635,
             "range": "± 280.099",
+            "unit": "us",
+            "extra": "100 samples\n2 iterations"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "a7cf246a4a24b71812d5f66fae9908a35bfff372",
+          "message": "Sticth neverFail support into config.ts itself\n\nChicken egg problem: How do you support a parameter while parsing\nparameters...",
+          "timestamp": "2025-02-11T00:22:18+02:00",
+          "tree_id": "773bcc87dc66f17cd9c161d0cf7b6eee4a5e7a3f",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/a7cf246a4a24b71812d5f66fae9908a35bfff372"
+        },
+        "date": 1739226238513,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "Fibonacci 10",
+            "value": 146.383,
+            "range": "± 0.0870543",
+            "unit": "ns",
+            "extra": "100 samples\n198 iterations"
+          },
+          {
+            "name": "Fibonacci 20",
+            "value": 19.9666,
+            "range": "± 269.081",
             "unit": "us",
             "extra": "100 samples\n2 iterations"
           }
