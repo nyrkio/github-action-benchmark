@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739487416840,
+  "lastUpdate": 1739487619708,
   "entries": {
     "Rust Benchmark": [
       {
@@ -63479,6 +63479,42 @@ window.BENCHMARK_DATA = {
             "value": 42.81340292096138,
             "unit": "ns",
             "range": "± 0.0720380280963344"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "7f38fc4881bf0c24d0ca4f38828b10f26292269b",
+          "message": "A few more nyrkio-enable missing from legacy tests",
+          "timestamp": "2025-02-14T00:58:06+02:00",
+          "tree_id": "9ffe5bcd113d974d12569eda34ac99e9a77a0e11",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/7f38fc4881bf0c24d0ca4f38828b10f26292269b"
+        },
+        "date": 1739487615942,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Sample.Benchmarks.Fib10",
+            "value": 21.163886276575234,
+            "unit": "ns",
+            "range": "± 0.024349678481244207"
+          },
+          {
+            "name": "Sample.Benchmarks.Fib20",
+            "value": 42.99891563824245,
+            "unit": "ns",
+            "range": "± 0.081829911907892"
           }
         ]
       }
