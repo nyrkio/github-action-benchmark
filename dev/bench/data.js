@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739482817132,
+  "lastUpdate": 1739483187805,
   "entries": {
     "Rust Benchmark": [
       {
@@ -63263,6 +63263,42 @@ window.BENCHMARK_DATA = {
             "value": 42.956077167621025,
             "unit": "ns",
             "range": "± 0.12310231223290924"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "881c27c8c93a364f250f0c2fad700aa5deb853ad",
+          "message": "Disable one more check\n\nTODO: Probably need to remain backward compatible with the url and\nuse something like commit.repoUrl for Nyrkiö.",
+          "timestamp": "2025-02-13T23:44:06+02:00",
+          "tree_id": "e90638b3b08ab43bbeb0c52ce626cccdbd286711",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/881c27c8c93a364f250f0c2fad700aa5deb853ad"
+        },
+        "date": 1739483184928,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Sample.Benchmarks.Fib10",
+            "value": 21.173136581977207,
+            "unit": "ns",
+            "range": "± 0.02600262184693243"
+          },
+          {
+            "name": "Sample.Benchmarks.Fib20",
+            "value": 43.342420349518456,
+            "unit": "ns",
+            "range": "± 0.0819919611826359"
           }
         ]
       }
