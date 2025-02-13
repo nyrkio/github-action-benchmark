@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739468417291,
+  "lastUpdate": 1739468419232,
   "entries": {
     "Rust Benchmark": [
       {
@@ -52121,6 +52121,42 @@ window.BENCHMARK_DATA = {
             "value": 19970.29295154193,
             "unit": "ns/iter",
             "extra": "iterations: 34958\ncpu: 19969.60352422908 ns\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "4cbe4bc62fe2b43691a3d1b4f496ad119bfa0913",
+          "message": "Add support for Nyrkio parameters\n\nnyrkio-public\nnyrkio-settings-pvalue\nnyrkio-settings-threshold\ncomment-always and comment-on-alert",
+          "timestamp": "2025-02-13T05:13:57+02:00",
+          "tree_id": "c0d64554c2953f21b09dfb40035aec69aa84ad66",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/4cbe4bc62fe2b43691a3d1b4f496ad119bfa0913"
+        },
+        "date": 1739468414652,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 158.71122342979368,
+            "unit": "ns/iter",
+            "extra": "iterations: 4359817\ncpu: 158.70689067912716 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 20025.509429118243,
+            "unit": "ns/iter",
+            "extra": "iterations: 35051\ncpu: 20025.06633191635 ns\nthreads: 1"
           }
         ]
       }
