@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739468419232,
+  "lastUpdate": 1739468427047,
   "entries": {
     "Rust Benchmark": [
       {
@@ -64763,6 +64763,36 @@ window.BENCHMARK_DATA = {
           {
             "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
             "value": 1935652399.8307583,
+            "unit": "ops/s",
+            "extra": "iterations: 3\nforks: 1\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "4cbe4bc62fe2b43691a3d1b4f496ad119bfa0913",
+          "message": "Add support for Nyrkio parameters\n\nnyrkio-public\nnyrkio-settings-pvalue\nnyrkio-settings-threshold\ncomment-always and comment-on-alert",
+          "timestamp": "2025-02-13T05:13:57+02:00",
+          "tree_id": "c0d64554c2953f21b09dfb40035aec69aa84ad66",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/4cbe4bc62fe2b43691a3d1b4f496ad119bfa0913"
+        },
+        "date": 1739468424031,
+        "tool": "jmh",
+        "benches": [
+          {
+            "name": "org.openjdk.jmh.samples.JMHSample_01_HelloWorld.wellHelloThere",
+            "value": 1932588864.0276177,
             "unit": "ops/s",
             "extra": "iterations: 3\nforks: 1\nthreads: 1"
           }
