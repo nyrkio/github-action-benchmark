@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739468381896,
+  "lastUpdate": 1739468384075,
   "entries": {
     "Rust Benchmark": [
       {
@@ -45041,6 +45041,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.00002424245852700745",
             "extra": "mean: 1.6138856247962754 msec\nrounds: 613"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "4cbe4bc62fe2b43691a3d1b4f496ad119bfa0913",
+          "message": "Add support for Nyrkio parameters\n\nnyrkio-public\nnyrkio-settings-pvalue\nnyrkio-settings-threshold\ncomment-always and comment-on-alert",
+          "timestamp": "2025-02-13T05:13:57+02:00",
+          "tree_id": "c0d64554c2953f21b09dfb40035aec69aa84ad66",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/4cbe4bc62fe2b43691a3d1b4f496ad119bfa0913"
+        },
+        "date": 1739468380399,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "bench.py::test_fib_10",
+            "value": 75656.28984081029,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000002160959853529387",
+            "extra": "mean: 13.217671684722015 usec\nrounds: 37199"
+          },
+          {
+            "name": "bench.py::test_fib_20",
+            "value": 597.8743433699666,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00006694250693908402",
+            "extra": "mean: 1.6725922613829185 msec\nrounds: 593"
           }
         ]
       }
