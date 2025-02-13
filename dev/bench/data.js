@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739468479535,
+  "lastUpdate": 1739479009609,
   "entries": {
     "Rust Benchmark": [
       {
@@ -63119,6 +63119,42 @@ window.BENCHMARK_DATA = {
             "value": 43.37188056537083,
             "unit": "ns",
             "range": "± 0.038189333798245816"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "1f53324cd68b6d010b54c2ae55bdb28adc1d5d81",
+          "message": "Change all workflows to use nyrkio fork\n\nFor security reasons, to begin with...",
+          "timestamp": "2025-02-13T22:35:11+02:00",
+          "tree_id": "13695ae39a384722f7b547496bddd58b1d6ea73a",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/1f53324cd68b6d010b54c2ae55bdb28adc1d5d81"
+        },
+        "date": 1739479005967,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Sample.Benchmarks.Fib10",
+            "value": 21.935094445943832,
+            "unit": "ns",
+            "range": "± 0.03684344139843097"
+          },
+          {
+            "name": "Sample.Benchmarks.Fib20",
+            "value": 43.03608292341232,
+            "unit": "ns",
+            "range": "± 0.1378990374568837"
           }
         ]
       }
