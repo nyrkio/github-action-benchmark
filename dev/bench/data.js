@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739468435102,
+  "lastUpdate": 1739468479535,
   "entries": {
     "Rust Benchmark": [
       {
@@ -16439,6 +16439,66 @@ window.BENCHMARK_DATA = {
           {
             "name": "Fibonacci/Iterative/21",
             "value": 4,
+            "range": "± 0",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "4cbe4bc62fe2b43691a3d1b4f496ad119bfa0913",
+          "message": "Add support for Nyrkio parameters\n\nnyrkio-public\nnyrkio-settings-pvalue\nnyrkio-settings-threshold\ncomment-always and comment-on-alert",
+          "timestamp": "2025-02-13T05:13:57+02:00",
+          "tree_id": "c0d64554c2953f21b09dfb40035aec69aa84ad66",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/4cbe4bc62fe2b43691a3d1b4f496ad119bfa0913"
+        },
+        "date": 1739468475931,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "BenchFib10",
+            "value": 209,
+            "range": "± 21",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "BenchFib20",
+            "value": 26399,
+            "range": "± 95",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Recursive/20",
+            "value": 20106,
+            "range": "± 540",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Iterative/20",
+            "value": 3,
+            "range": "± 0",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Recursive/21",
+            "value": 32545,
+            "range": "± 1214",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "Fibonacci/Iterative/21",
+            "value": 3,
             "range": "± 0",
             "unit": "ns/iter"
           }
