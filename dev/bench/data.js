@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1739488067381,
+  "lastUpdate": 1739542418434,
   "entries": {
     "Rust Benchmark": [
       {
@@ -63587,6 +63587,42 @@ window.BENCHMARK_DATA = {
             "value": 43.362441911300024,
             "unit": "ns",
             "range": "± 0.12081492565157202"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "95a01502a3b475c38b3cd9aca8c0ad1b7ee830d9",
+          "message": "Fix: Don't send empty config object to user/config",
+          "timestamp": "2025-02-14T16:11:46+02:00",
+          "tree_id": "a23c4ae20bd858b8115f2408ab86593fd016818d",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/95a01502a3b475c38b3cd9aca8c0ad1b7ee830d9"
+        },
+        "date": 1739542415279,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Sample.Benchmarks.Fib10",
+            "value": 21.197309319462097,
+            "unit": "ns",
+            "range": "± 0.043969309027023014"
+          },
+          {
+            "name": "Sample.Benchmarks.Fib20",
+            "value": 43.10907497207324,
+            "unit": "ns",
+            "range": "± 0.10330547388872395"
           }
         ]
       }
