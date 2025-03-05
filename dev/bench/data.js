@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1740036175409,
+  "lastUpdate": 1741136254110,
   "entries": {
     "Rust Benchmark": [
       {
@@ -63731,6 +63731,42 @@ window.BENCHMARK_DATA = {
             "value": 43.13985145321259,
             "unit": "ns",
             "range": "± 0.07190193896318238"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "committer": {
+            "email": "henrik@nyrk.io",
+            "name": "Henrik Ingo",
+            "username": "henrikingo"
+          },
+          "distinct": true,
+          "id": "58cdea7cd59703e6b62ecbd6f970a13e90313624",
+          "message": "fix: NyrkioResultSorter wasn't always called if testName needed to be sanitized for URI",
+          "timestamp": "2025-03-05T02:17:40+02:00",
+          "tree_id": "0f543c3599823f89eca773457f910e5904c2a3d4",
+          "url": "https://github.com/nyrkio/github-action-benchmark/commit/58cdea7cd59703e6b62ecbd6f970a13e90313624"
+        },
+        "date": 1741136251061,
+        "tool": "benchmarkdotnet",
+        "benches": [
+          {
+            "name": "Sample.Benchmarks.Fib10",
+            "value": 21.940486353177292,
+            "unit": "ns",
+            "range": "± 0.03473735798532825"
+          },
+          {
+            "name": "Sample.Benchmarks.Fib20",
+            "value": 43.48965838750203,
+            "unit": "ns",
+            "range": "± 0.09866607495519784"
           }
         ]
       }
